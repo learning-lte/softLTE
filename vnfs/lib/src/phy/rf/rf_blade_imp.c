@@ -339,7 +339,7 @@ double rf_blade_get_tx_gain(void *h)
 double rf_blade_set_rx_freq(void *h, double freq)
 {
   rf_blade_handler_t *handler = (rf_blade_handler_t*) h;
-  uint32_t f_int = (uint32_t) round(freq);
+  long unsigned int f_int = (long unsigned int) round(freq);
   int status = bladerf_set_frequency(handler->dev, BLADERF_MODULE_RX, f_int);
   if (status != 0) {
     fprintf(stderr, "Failed to set samplerate = %u: %s\n",
@@ -356,7 +356,7 @@ double rf_blade_set_rx_freq(void *h, double freq)
 double rf_blade_set_tx_freq(void *h, double freq)
 {
   rf_blade_handler_t *handler = (rf_blade_handler_t*) h;
-  uint32_t f_int = (uint32_t) round(freq);
+  long unsigned int f_int = (long unsigned int) round(freq);
   int status = bladerf_set_frequency(handler->dev, BLADERF_MODULE_TX, f_int);
   if (status != 0) {
     fprintf(stderr, "Failed to set samplerate = %u: %s\n",
