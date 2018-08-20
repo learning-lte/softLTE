@@ -1139,3 +1139,21 @@
 	/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0) [0x7ffff5fcd830]
 	srsenb(_start+0x29) [0x474529]
 
+--- command='srsenb enb.conf' version=18.3.1 signal=11 date='20/08/2018 13:41:16' ---
+	srsenb() [0x4ff19a]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x354b0) [0x7fb1943be4b0]
+	/usr/local/lib/libsrslte_rf.so(srslte_rf_close+0x7) [0x7fb1954064a7]
+	srsenb(_ZN6srsenb3enb4stopEv+0x89) [0x483c69]
+	srsenb(main+0x46d) [0x4747ed]
+	/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0) [0x7fb1943a9830]
+	srsenb(_start+0x29) [0x474b29]
+
+--- command='srsenb enb.conf' version=18.3.1 signal=11 date='20/08/2018 13:42:55' ---
+	srsenb() [0x4ff19a]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x354b0) [0x7f894b4ef4b0]
+	/usr/local/lib/libsrslte_rf.so(srslte_rf_close+0x7) [0x7f894c5374a7]
+	srsenb(_ZN6srsenb3enb4stopEv+0x89) [0x483c69]
+	srsenb(main+0x46d) [0x4747ed]
+	/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0) [0x7f894b4da830]
+	srsenb(_start+0x29) [0x474b29]
+
