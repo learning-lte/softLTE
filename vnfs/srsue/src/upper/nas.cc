@@ -84,7 +84,7 @@ void nas::init(usim_interface_nas *usim_,
 }
 
 void nas::stop() {
-  //Mallesh: write_ctxt_file(ctxt);
+  write_ctxt_file(ctxt);
   close_ul_sock();
 }
 
@@ -225,8 +225,7 @@ void nas::write_pdu_sock(uint8_t *msg, int N_bytes, uint8_t msg_type)
   memset(&serveraddr, 0, sizeof(serveraddr));
   serveraddr.sin_family = AF_INET;
   serveraddr.sin_port = htons(9999);
-  serveraddr.sin_addr.s_addr = inet_addr("130.245.144.114");
-  serveraddr.sin_addr.s_addr = inet_addr("172.18.0.23");
+  serveraddr.sin_addr.s_addr = inet_addr("130.245.144.115");
 
   bytes_sent = sendto(ul_sock_fd, temp, N_bytes+1, 0, (struct sockaddr *)&serveraddr, sizeof(serveraddr));
   if (bytes_sent < 0)
