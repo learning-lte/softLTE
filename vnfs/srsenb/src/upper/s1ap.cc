@@ -566,7 +566,7 @@ void s1ap::write_pdu_sock(uint8_t *msg, int N_bytes, uint8_t msg_type)
   memset(&serveraddr, 0, sizeof(serveraddr));
   serveraddr.sin_family = AF_INET;
   serveraddr.sin_port = htons(9997);
-  serveraddr.sin_addr.s_addr = inet_addr("130.245.144.114");
+  serveraddr.sin_addr.s_addr = inet_addr("130.245.144.114"); // UE IP address
 
   bytes_sent = sendto(dl_sock_fd, temp, N_bytes+1, 0, (struct sockaddr *)&serveraddr, sizeof(serveraddr));
   if (bytes_sent < 0)
