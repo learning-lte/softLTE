@@ -84,7 +84,7 @@ void nas::init(usim_interface_nas *usim_,
 }
 
 void nas::stop() {
-  //Mallesh: write_ctxt_file(ctxt);
+  write_ctxt_file(ctxt);
   close_ul_sock();
 }
 
